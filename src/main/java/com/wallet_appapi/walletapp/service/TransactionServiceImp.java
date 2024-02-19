@@ -77,7 +77,7 @@ public class TransactionServiceImp implements TransactionService {
         Request request = new Request.Builder()
                 .url(url)
                 .method(post, requestBody)
-                .addHeader("Sandbox-Key;", "c7AuCjA7Jm1mN7hvhc5ZwrHmvDsrXkLj1708204297")
+                .addHeader("Sandbox-Key", "c7AuCjA7Jm1mN7hvhc5ZwrHmvDsrXkLj1708204297")
                 .addHeader("x-ibm-client-id", "f")
                 .build();
         return okHttpClient.newCall(request).execute();

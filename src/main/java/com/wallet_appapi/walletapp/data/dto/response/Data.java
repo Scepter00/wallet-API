@@ -12,5 +12,7 @@ import lombok.Setter;
 public class Data {
 
     public ResponseData responseData;
+    public String statusCode;
+    public String description;
 
 }

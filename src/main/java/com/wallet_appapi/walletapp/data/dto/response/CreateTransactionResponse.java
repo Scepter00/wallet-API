@@ -13,8 +13,4 @@ public class CreateTransactionResponse {
 
     public String message;
     public Data data;
-    public ResponseData responseData;
-    public String statusCode;
-    public String description;
-    public boolean status;
 }
