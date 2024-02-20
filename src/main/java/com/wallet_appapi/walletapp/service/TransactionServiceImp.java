@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -55,6 +56,13 @@ public class TransactionServiceImp implements TransactionService {
         transactionHistory.setBeneficiaryAccountNumber(createTransactionRequest.getBeneficiaryAccountNumber());
         transactionHistory.setAmount(Double.valueOf(createTransactionRequest.getAmount()));
         transactionRepository.save(transactionHistory);
+
+
+    }
+
+    @Override
+    public List<TransactionHistory> viewAll() {
+        return transactionRepository.findAll();
     }
 
     private CreateTransactionResponse handleApiResponse(Response response) throws IOException {

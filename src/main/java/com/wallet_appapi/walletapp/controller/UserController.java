@@ -28,5 +28,4 @@ public class UserController {
         LoginResponse loggedInUser = userService.loginUser(loginRequest);
         return ResponseEntity.ok(loggedInUser);
     }
-
 }
