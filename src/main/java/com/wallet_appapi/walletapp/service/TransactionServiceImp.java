@@ -53,8 +53,7 @@ public class TransactionServiceImp implements TransactionService {
         transactionHistory.setOriginatorAccountNumber(createTransactionRequest.getOriginatorAccountNumber());
         transactionHistory.setBeneficiaryAccountName(createTransactionRequest.getBeneficiaryAccountName());
         transactionHistory.setBeneficiaryAccountNumber(createTransactionRequest.getBeneficiaryAccountNumber());
-        transactionHistory.setAmount(createTransactionRequest.getAmount());
-
+        transactionHistory.setAmount(Double.valueOf(createTransactionRequest.getAmount()));
         transactionRepository.save(transactionHistory);
     }
 

@@ -30,6 +30,8 @@ public class FcmbApiService {
     public ResponseEntity<String> makeB2BTransfer(String requestBody) {
         String url = BASE_URL + "/payments/b2b/transfers";
         HttpHeaders headers = createHeaders();
+        headers.setContentType(MediaType.valueOf("application/json"));
+        headers.set("Accept", "application/json");
         HttpEntity<String> entity = new HttpEntity<>(requestBody, headers);
         return restTemplate.postForEntity(url, entity, String.class);
     }
