@@ -88,7 +88,5 @@ public class TransactionServiceImp implements TransactionService {
                 .addHeader("x-ibm-client-id", "f")
                 .build();
         return okHttpClient.newCall(request).execute();
-
-
     }
 }
