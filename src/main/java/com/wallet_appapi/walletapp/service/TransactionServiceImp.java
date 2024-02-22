@@ -21,6 +21,7 @@ import java.util.List;
 @Slf4j
 public class TransactionServiceImp implements TransactionService {
 
+
     private final TransactionRepository transactionRepository;
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final OkHttpClient okHttpClient = new OkHttpClient();
@@ -41,7 +42,6 @@ public class TransactionServiceImp implements TransactionService {
                 TransactionHistory transactionHistory  = new TransactionHistory();
                 saveTransaction(transactionHistory,createTransactionRequest);
             }
-
             response.close();
             return createTransactionResponse;
         } catch (IOException e) {
